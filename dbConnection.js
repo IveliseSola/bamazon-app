@@ -8,6 +8,4 @@ var connection = mysql.createConnection({
     database: "bamazon"
 });
 
-module.exports = {
-	connection: connection
-}
+module.exports = connection;
