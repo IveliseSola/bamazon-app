@@ -1,10 +1,10 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 var connection = require("./dbConnection.js");
+var myQueries = require("./dbQueries.js");
 
 connection.connect(function (err) {
     if (err) throw err;
-    console.log("it's working");
     // functions here
 });
 
@@ -20,7 +20,7 @@ inquirer.prompt([
         message: "How many you want to buy?"
       }
 ]).then(function(inquirerResponse) {
-    if (inquirerResponse.options === "post an item"){
+    if (){
          //postItems();
          console.log(inquirerResponse.options);
     }else {

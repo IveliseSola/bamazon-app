@@ -1,5 +1,7 @@
 var mysql = require("mysql");
 
+module.exports = connection;
+
 var connection = mysql.createConnection({
     host: "127.0.0.1",
     port: 3306,
@@ -7,5 +9,3 @@ var connection = mysql.createConnection({
     password: "root",
     database: "bamazon"
 });
-
-module.exports = connection;
