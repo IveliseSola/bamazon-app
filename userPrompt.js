@@ -4,8 +4,6 @@ var connection = require("./dbConnection.js");
 var myQueries = require("./dbQueries.js");
 
 module.exports.start = function () {
-
-    //myQueries.allProducts();
     main();
 }
 
