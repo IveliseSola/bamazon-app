@@ -26,12 +26,12 @@ var getProduct = function (arg, callback) {
     });
 }
 
-function callbackF(res) {
+module.exports.callback = function(res) {
     var result = res;
     return result[0].stock_quantity;
 }
 
-var callback = callbackF(res);
+getProduct(arg, callback);
 
 var updateInventory = function (arg1, arg2) {
     connection.query("UPDATE products SET ? WHERE ?",
@@ -60,9 +60,11 @@ var totalCost = function (arg1, arg2) {
 }
 
 module.exports = {
-    callback: callback,
     allProducts: function () { },
     getProduct: function () { },
-    updateInventory: function () { },
+    callback: function () {},
+    // updateInventory: function () { },
     totalCost: function () { }
 }
+
+// console.log(getProduct(5));
