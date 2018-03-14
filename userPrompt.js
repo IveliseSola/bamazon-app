@@ -25,18 +25,8 @@ function main() {
 
         var quantityRequired = parseInt(inquirerResponse.productQuantity);
         var idParsed = parseInt(inquirerResponse.idProduct);
-        var callback = myQueries.callback;
-        var quantity = myQueries.getProduct(idParsed, callback);
+        
+         myQueries.product(idParsed, quantityRequired);
             
-        console.log(quantity);
-        if (quantity >= quantityRequired) {
-            var num = quantity - quantityRequired;
-            myQueries.updateInventory(num, idParsed);
-            var cost = myQueries.totalCost(idParsed, quantityRequired);
-            console.log("The total cost of your purchase is: $" + cost);
-        } else {
-           
-            console.log("Insufficient quantity!");
-        }
-    });
+});
 }
