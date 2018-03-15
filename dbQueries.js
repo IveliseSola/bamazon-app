@@ -58,11 +58,3 @@ function calculateCost(arg1, arg2) {
     });
 }
 
-// module.exports = {
-//     // callback: callback,
-//     allProducts: function () { },
-//     getProduct: function () { },
-//     updateInventory: function () { },
-//     totalCost: function () { }
-// }
-
