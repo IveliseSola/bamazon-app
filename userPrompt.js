@@ -3,6 +3,8 @@ var inquirer = require("inquirer");
 var connection = require("./dbConnection.js");
 var myQueries = require("./dbQueries.js");
 
+
+
 module.exports.main = function() {
     //myQueries.allProducts();
     inquirer.prompt([
@@ -20,8 +22,7 @@ module.exports.main = function() {
 
         var quantityRequired = parseInt(inquirerResponse.productQuantity);
         var idParsed = parseInt(inquirerResponse.idProduct);
-        
-         myQueries.product(idParsed, quantityRequired);
-            
-});
+
+        myQueries.product(idParsed, quantityRequired);
+    });
 }

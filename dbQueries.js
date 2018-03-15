@@ -1,6 +1,6 @@
 var mysql = require("mysql");
 var connection = require("./dbConnection.js");
-var aux = 0;
+
 
 module.exports.allProducts = function () {
     console.log("\n Products: \n");
@@ -26,7 +26,8 @@ module.exports.product = function (arg, arg1) {
                 updateInventory(num, arg);
                 calculateCost(arg, arg1);
             } else {
-                console.log("Insufficient quantity!");
+                console.log("Insufficient quantity! \n");
+                allProducts();
             }
             connection.end();
         });
@@ -57,4 +58,3 @@ function calculateCost(arg1, arg2) {
         //connection.end();
     });
 }
-
