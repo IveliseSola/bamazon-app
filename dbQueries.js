@@ -2,7 +2,7 @@ var mysql = require("mysql");
 var connection = require("./dbConnection.js");
 var aux = 0;
 
-var allProducts = function () {
+module.exports.allProducts = function () {
     console.log("\n Products: \n");
     connection.query("SELECT item_id, product_name, price FROM products", function (err, res) {
         if (err) throw err;
@@ -15,7 +15,7 @@ var allProducts = function () {
     });
 }
 
-module.exports.product = function(arg, arg1) {
+module.exports.product = function (arg, arg1) {
     connection.query("SELECT stock_quantity FROM products WHERE ?",
         {
             item_id: arg
@@ -32,7 +32,7 @@ module.exports.product = function(arg, arg1) {
         });
 }
 
-function updateInventory (arg1, arg2) {
+function updateInventory(arg1, arg2) {
     connection.query("UPDATE products SET ? WHERE ?",
         [
             {

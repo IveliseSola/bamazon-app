@@ -3,11 +3,8 @@ var inquirer = require("inquirer");
 var connection = require("./dbConnection.js");
 var myQueries = require("./dbQueries.js");
 
-module.exports.start = function () {
-    main();
-}
-
-function main() {
+module.exports.main = function() {
+    //myQueries.allProducts();
     inquirer.prompt([
         {
             type: "input",
