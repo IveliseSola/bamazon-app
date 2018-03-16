@@ -6,7 +6,11 @@ var myQueries = require("./dbQueries.js");
 
 
 module.exports.main = function() {
-    //myQueries.allProducts();
+    myQueries.allProducts();
+    setTimeout(userprompt, 2000);
+    
+}
+function userprompt() {
     inquirer.prompt([
         {
             type: "input",
