@@ -1,6 +1,4 @@
-var mysql = require("mysql");
 var inquirer = require("inquirer");
-var connection = require("./dbConnection.js");
 var myQueries = require("./dbQueries.js");
 
 
