@@ -11,7 +11,7 @@ module.exports.allProducts = function () {
                 + "Product Name: " + res[i].product_name + ", "
                 + "Price: $" + res[i].price + "\n");
         }
-        connection.end();
+        //connection.end();
     });
 }
 
