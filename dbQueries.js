@@ -26,7 +26,6 @@ module.exports.product = function (arg, arg1) {
                 calculateCost(arg, arg1);
             } else {
                 console.log("Insufficient quantity! \n");
-                allProducts();
             }
             connection.end();
         });
