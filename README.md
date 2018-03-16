@@ -15,3 +15,7 @@ bamanzon is a Node app that takes in orders from customers and deplete stock fro
 
   - Mysql npm package
   - Inquirer npm package
+
+### Demo
+
+[Video](https://drive.google.com/open?id=1aZScOjuNM7aM10N3OzDpaF226OM6pYE5)
